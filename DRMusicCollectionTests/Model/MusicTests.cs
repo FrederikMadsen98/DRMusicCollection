@@ -16,7 +16,7 @@ namespace DRMusicCollection.Model.Tests
         {
             Music music = new()
             {
-                Title = "House of Rock",
+                Title = "Crass",
                 Artist = "Elvis",
                 Duration = 3,
                 PublicationYear = 1989
@@ -25,7 +25,7 @@ namespace DRMusicCollection.Model.Tests
 
             Music MusicNullTitle = new()
             {
-                Title = null,
+                Title = "",
                 Artist = "Frederik",
                 Duration = 4,
                 PublicationYear = 1990
@@ -43,7 +43,8 @@ namespace DRMusicCollection.Model.Tests
             {
                 Title = "House of Jazz",
                 Artist = "Frederik",
-                Duration = 5
+                Duration = -1,
+                PublicationYear = 2000
             };
             Assert.ThrowsException<ArgumentOutOfRangeException>(
                 () => MusicLowDuration.Validate());
@@ -52,7 +53,7 @@ namespace DRMusicCollection.Model.Tests
             {
                 Title = "Mine store tanker",
                 Artist = "Mig selv",
-                Duration = 10,
+                Duration = 1,
                 PublicationYear = 1992
             };
             MusicGoodDuration.Validate();
