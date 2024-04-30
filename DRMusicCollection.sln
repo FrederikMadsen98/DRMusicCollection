@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRMusicCollection", "DRMusicCollection\DRMusicCollection.csproj", "{7155E28F-4722-42C5-BBC5-D0CE9A2CCE6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DRMusicCollection", "DRMusicCollection\DRMusicCollection.csproj", "{7155E28F-4722-42C5-BBC5-D0CE9A2CCE6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DRMusicCollectionTests", "DRMusicCollectionTests\DRMusicCollectionTests.csproj", "{513CFB75-F1E4-4C37-BD55-10305D6BFEFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7155E28F-4722-42C5-BBC5-D0CE9A2CCE6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7155E28F-4722-42C5-BBC5-D0CE9A2CCE6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7155E28F-4722-42C5-BBC5-D0CE9A2CCE6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{513CFB75-F1E4-4C37-BD55-10305D6BFEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{513CFB75-F1E4-4C37-BD55-10305D6BFEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{513CFB75-F1E4-4C37-BD55-10305D6BFEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{513CFB75-F1E4-4C37-BD55-10305D6BFEFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
