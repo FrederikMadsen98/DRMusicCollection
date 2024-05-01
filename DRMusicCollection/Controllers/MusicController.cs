@@ -25,10 +25,10 @@ namespace DRMusicCollection.Controllers
         [HttpGet("{title}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<Music> Get(string title)
+        public ActionResult<Music> Get(int id)
         {
-            Music music = _repo.GetByTitle(title);
-            if (music == null) return NotFound("No such title" + title);
+            Music music = _repo.GetById(id);
+            if (music == null) return NotFound("No such title" + id);
             return Ok(music);
         }
 
@@ -55,12 +55,12 @@ namespace DRMusicCollection.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<Music> Put(string title, [FromBody] Music value)
+        public ActionResult<Music> Put(int id, [FromBody] Music value)
         {
             try
             {
-                Music updatedMusic = _repo.Update(title, value);
-                if (updatedMusic == null) return NotFound("No such music, title" + title);
+                Music updatedMusic = _repo.Update(id, value);
+                if (updatedMusic == null) return NotFound(id);
                 return Ok(updatedMusic);
             }
             catch (ArgumentException ex)
