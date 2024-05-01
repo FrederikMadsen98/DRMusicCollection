@@ -42,14 +42,13 @@ namespace DRMusicCollection.Repository
             }
             return musics;
         }
-        public Music GetByTitle(string title)
+        public Music? GetById(int id)
         {
-            return Data.Find(music => music.Title == title);
+            return Data.Find(music => music.Id == id);
         }
         public Music Add(Music newMusic)
         {
             newMusic.Validate();
-            newMusic.Title = newTitle;
             Data.Add(newMusic);
             return newMusic;
         }
@@ -60,10 +59,10 @@ namespace DRMusicCollection.Repository
             Data.Remove(music);
             return music;
         }
-        public Music Update(string title, Music updates)
+        public Music? Update(int id, Music updates)
         {
             updates.Validate();
-            Music music = Data.Find(music1 =>music1.Title == title);
+            Music? music = Data.Find(music1 =>music1.Id == id);
             if (music == null) return null;
             music.Title = updates.Title;
             music.Artist = updates.Artist;
